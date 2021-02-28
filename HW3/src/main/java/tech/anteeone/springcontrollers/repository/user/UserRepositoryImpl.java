@@ -28,7 +28,7 @@ public class UserRepositoryImpl implements UserRepository ,AutoCloseable {
             while (rs.next()){
                 String emailSQL = rs.getString(1);
                 if(email.equals(emailSQL)){
-                    return new UserDto(emailSQL);
+                    return new UserDto(emailSQL,"","");
                 }
             }
         }

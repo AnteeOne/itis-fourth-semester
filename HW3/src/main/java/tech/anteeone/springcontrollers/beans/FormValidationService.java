@@ -12,11 +12,11 @@ public class FormValidationService {
                 formPasswordsIsValid(form);
     }
 
-    private boolean formEmailIsValid(UserDto dto){
+    public boolean formEmailIsValid(UserDto dto){
         return Pattern.compile(".+@.+").matcher(dto.getEmail()).matches();
     }
 
-    private boolean formPasswordsIsValid(UserDto dao){
+    public boolean formPasswordsIsValid(UserDto dao){
         return dao.getPassword().length() > 8 &&
                 dao.getPassword().equals(dao.getPassword2());
     }
